@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getCharacterImages } from './supabaseClient';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import './index.css';
 
 interface Character {
   name: string;
