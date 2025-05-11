@@ -108,17 +108,17 @@ function App() {
               {isOpen && (
                 <div className="mt-4 flex flex-col gap-4">
                   <div>
-                    <div className="font-medium mb-1">Платное:</div>
+                    <div className="font-bold mb-1 text-gray-900">Платное:</div>
                     <div className="flex items-center gap-3">
                       <img src={character.bestPaidWeaponImg} alt={character.bestPaidWeapon} className="w-16 h-16 object-cover rounded" />
-                      <span>{character.bestPaidWeapon}</span>
+                      <span className="text-gray-900 font-semibold">{character.bestPaidWeapon}</span>
                     </div>
                   </div>
                   <div>
-                    <div className="font-medium mb-1">Бесплатное:</div>
+                    <div className="font-bold mb-1 text-gray-900">Бесплатное:</div>
                     <div className="flex items-center gap-3">
                       <img src={character.bestFreeWeaponImg} alt={character.bestFreeWeapon} className="w-16 h-16 object-cover rounded" />
-                      <span>{character.bestFreeWeapon}</span>
+                      <span className="text-gray-900 font-semibold">{character.bestFreeWeapon}</span>
                     </div>
                   </div>
                 </div>
