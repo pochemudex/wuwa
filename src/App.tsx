@@ -92,15 +92,13 @@ function App() {
                   className="w-16 h-16 rounded-full object-cover border-2 border-gray-300"
                 />
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-lg text-gray-900 truncate">{character.name} / {character.nameRu}</div>
+                  <div className="font-bold text-lg text-gray-900 truncate">{character.name} / {character.nameRu}</div>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${elementColors[character.element] || 'bg-gray-200 text-gray-800'}`}>{character.element}</span>
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${elementColors[character.element] || 'bg-gray-200 text-gray-800'}`}>{character.element}</span>
                     <span className="ml-2"><StarBadge stars={character.stars} /></span>
                   </div>
                 </div>
-                <span className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}>
-                  ▼
-                </span>
+                <span className={`transition-transform duration-200 text-2xl font-bold text-gray-800 select-none ${isOpen ? 'rotate-180' : ''}`}>▼</span>
               </div>
               {isOpen && (
                 <div className="mt-4 flex flex-col gap-4">
