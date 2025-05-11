@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getCharacterImages } from './supabaseClient';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 interface Character {
   name: string;
@@ -98,7 +100,10 @@ function App() {
                     <span className="ml-2"><StarBadge stars={character.stars} /></span>
                   </div>
                 </div>
-                <span className={`transition-transform duration-200 text-2xl font-bold text-gray-800 select-none ${isOpen ? 'rotate-180' : ''}`}>▼</span>
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={`transition-transform duration-200 text-2xl font-bold text-gray-900 select-none ${isOpen ? 'rotate-180' : ''}`}
+                />
               </div>
               {isOpen && (
                 <div className="mt-4 flex flex-col gap-4">
